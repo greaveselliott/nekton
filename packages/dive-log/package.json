@@ -1,0 +1,31 @@
+{
+  "name": "@nekton/dive-log",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
+    "compile": "tsc -b tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  },
+  "author": "Elliott Greaves <greaveselliott@me.com>",
+  "homepage": "https://github.com/greaveselliott/nekton#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greaveselliott/nekton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/greaveselliott/nekton/issues"
+  }
+}
