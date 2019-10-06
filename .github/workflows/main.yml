@@ -54,3 +54,4 @@ jobs:
       - name: Unit tests
         run: npx yarn workspace @nekton/dive-log test:unit
         env:
+          CI: true
