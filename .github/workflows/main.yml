@@ -8,11 +8,6 @@ on:
 jobs:
   Component-Library-CI:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
@@ -32,11 +27,8 @@ jobs:
         env:
           CI: true
 
-  Dive-Log-CI:
-    runs-on: ubunto-latest
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
+  Dive-Log:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
