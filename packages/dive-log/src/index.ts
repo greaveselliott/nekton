@@ -1,3 +1,3 @@
-import logger from "@nekton/logger";
+import logger from '@nekton/logger'
 
-logger("Application started");
+logger('Application started')
