@@ -15,3 +15,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    - uses: MrBoolean/action-lerna@master
+    - name: Bootstrap Lerna
+      run: |
+        lerna run clean
+        lerna run compile
