@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  Component Library:
+  Component-Library-CI:
     runs-on: ubuntu-latest
 
     strategy:
@@ -32,7 +32,7 @@ jobs:
         env:
           CI: true
 
-  Dive Log:
+  Dive-Log-CI:
     runs-on: ubunto-latest
     strategy:
       matrix:
