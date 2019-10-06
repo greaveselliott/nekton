@@ -12,6 +12,9 @@
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
     "compile": "tsc -b tsconfig.json"
   },
+  "dependencies": {
+    "@nekton/logger": "^1.0.0"
+  },
   "devDependencies": {
     "typescript": "^3.5.3"
   },
