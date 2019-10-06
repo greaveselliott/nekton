@@ -1,6 +1,8 @@
 name: Node CI
 
-on: [push]
+on:
+  branches:
+    - master
 
 jobs:
   build:
@@ -24,5 +26,7 @@ jobs:
         run: npx yarn run lint
       - name: Build
         run: npx lerna run compile
+      - name: Unit tests
+        run: npx yarn test:unit
         env:
           CI: true
