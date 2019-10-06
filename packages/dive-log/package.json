@@ -8,9 +8,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn run clean && yarn run compile",
+    "build": "npx yarn run clean && npx yarn run compile",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
-    "compile": "tsc -b tsconfig.json"
+    "compile": "npx tsc -b tsconfig.json",
+    "lint": "npx eslint ./ --config '../../.eslintrc' --ignore-path '../../.eslintignore' --ext '.ts,.tsx'",
+    "test:unit": "npx jest --passWithNoTests"
   },
   "dependencies": {
     "@nekton/logger": "^1.0.0"

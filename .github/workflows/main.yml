@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  Component Library:
     runs-on: ubuntu-latest
 
     strategy:
@@ -24,10 +24,33 @@ jobs:
           npx yarn
           npx lerna bootstrap
       - name: Lint
-        run: npx yarn run lint
+        run: npx yarn workspace @nekton/component-library run lint
       - name: Build
-        run: npx lerna run compile
+        run: npx yarn workspace @nekton/component-library run compile
       - name: Unit tests
-        run: npx yarn test:unit
+        run: npx yarn workspace @nekton/component-library test:unit
         env:
           CI: true
+
+  Dive Log:
+    runs-on: ubunto-latest
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install
+        run: |
+          npx yarn
+          npx lerna bootstrap
+      - name: Lint
+        run: npx yarn workspace @nekton/dive-log run lint;
+      - name: Build
+        run: npx yarn workspace @nekton/dive-log run compile
+      - name: Unit tests
+        run: npx yarn workspace @nekton/dive-log test:unit
+        env:

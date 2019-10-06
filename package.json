@@ -19,9 +19,7 @@
     "typescript": "^3.6.3"
   },
   "scripts": {
-    "build": "lerna run compile",
-    "lint": "eslint ./  --ext '.ts,.tsx'",
-    "test:unit": "yarn jest --passWithNoTests"
+    "build": "lerna run compile"
   },
   "workspaces": [
     "./packages/*"
