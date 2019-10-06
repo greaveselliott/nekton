@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  Component-Library-CI:
+  component-library-ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -27,7 +27,7 @@ jobs:
         env:
           CI: true
 
-  Dive-Log:
+  dive-log-ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
