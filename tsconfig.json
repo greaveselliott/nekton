@@ -1,19 +1,31 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "composite": true,
-    "outDir": "./dist",
     "rootDir": ".",
     "declaration": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "module": "commonjs",
-    "target": "es6",
-    "lib": ["es6", "dom"]
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "rootDirs": ["src"],
+    "baseUrl": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": ["node_modules", "dist"],
   "paths": {
-    "@nekton/*": [
-      "packages/*"
-     ]
+    "@nekton/*": ["packages/*"]
   }
 }
