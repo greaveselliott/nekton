@@ -7,6 +7,8 @@
     "dist"
   ],
   "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o dist",
     "build": "npx yarn run clean && npx yarn run compile",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
     "compile": "npx tsc -b tsconfig.json",
@@ -14,6 +16,17 @@
     "test:unit": "npx jest --passWithNoTests"
   },
   "devDependencies": {
-    "typescript": "^3.5.3"
+    "@storybook/react": "^5.2.3",
+    "@types/jest": "^24.0.18",
+    "@types/storybook__react": "^4.0.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "jest": "^24.9.0",
+    "react-docgen-typescript-loader": "^3.3.0",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "react": "^16.10.2"
   }
 }
