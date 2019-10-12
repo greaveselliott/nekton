@@ -9,6 +9,12 @@ export const defaultPrimaryButtonWithText = () => (
   </Button>
 );
 
+export const defaultPrimaryDisabledButtonWithText = () => (
+  <Button style="primary" disabled={true}>
+    <span>Primary Button</span>
+  </Button>
+);
+
 export const defaultSecondaryButtonWithText = () => (
   <Button type="default" style="secondary">
     <span>Secondary Button</span>
@@ -23,12 +29,20 @@ export const smallRoundSecondaryButton = () => (
   <Button type="round" style="secondary" size="small"></Button>
 );
 
+export const smallRoundDisabledButton = () => (
+  <Button type="round" style="secondary" size="small" disabled={true}></Button>
+);
+
 export const mediumRoundPrimaryButton = () => (
   <Button type="round" style="primary" size="medium"></Button>
 );
 
 export const mediumRoundSecondaryButton = () => (
   <Button type="round" style="secondary" size="medium"></Button>
+);
+
+export const mediumRoundSecondaryDisabledButton = () => (
+  <Button type="round" style="secondary" size="medium" disabled={true}></Button>
 );
 
 export const largeRoundPrimaryButton = () => (
@@ -40,7 +54,7 @@ export const largeRoundSecondaryButton = () => (
 );
 
 export const smallRoundNegativeButton = () => (
-  <Button type="round" style="negative" size="large"></Button>
+  <Button type="round" style="negative" size="small"></Button>
 );
 
 export const smallRoundNegativeDisabledButton = () => (

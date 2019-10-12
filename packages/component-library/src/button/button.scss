@@ -1,13 +1,16 @@
 @import '../global';
 
 $button-font: $global-font-family-primary;
+$button-disabled-background-color: $global-color-disabled;
+$button-disabled-text-color: $global-color-disabled-text;
+$button-disabled-border-color: $global-color-disabled;
 $button-primary-text-color: $global-color-shade-one;
 $button-primary-background-color: $global-color-primary;
 $button-primary-border-color: $global-color-primary;
+$button-primary-hover-background-color: $global-color-primary-dark;
 $button-secondary-text-color: $global-color-primary;
 $button-negative-border-color: $global-color-negative;
 $button-negative-text-color: $global-color-negative;
-$button-negative-disabled-border-color: $global-color-negative-muted;
 $button-negative-hover-border-color: $global-color-negative;
 $button-negative-hover-background-color: $global-color-negative-muted;
 
@@ -22,10 +25,20 @@ $button-negative-hover-background-color: $global-color-negative-muted;
   text-decoration: none;
   cursor: pointer;
 
+  &:disabled {
+    background-color: $button-disabled-background-color;
+    color: $button-disabled-text-color;
+    border-color: $button-disabled-border-color;
+    cursor: not-allowed;
+  }
   &--primary {
     color: $button-primary-text-color;
     background-color: $button-primary-background-color;
     border-color: $button-primary-text-color;
+    &:hover:not([disabled]) {
+      background-color: $button-primary-hover-background-color;
+      color: $button-primary-text-color;
+    }
   }
 
   &--secondary {
@@ -47,10 +60,6 @@ $button-negative-hover-background-color: $global-color-negative-muted;
     &:hover:not([disabled]) {
       background-color: $button-negative-hover-background-color;
       border-color: $button-negative-hover-border-color;
-    }
-
-    &[disabled] {
-      border-color: $button-negative-disabled-border-color;
     }
   }
 
