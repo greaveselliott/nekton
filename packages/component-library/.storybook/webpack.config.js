@@ -3,10 +3,19 @@ module.exports = ({ config }) => {
     test: /\.(ts|tsx)$/,
     use: [
       {
-        loader: require.resolve('awesome-typescript-loader')
+        loader: require.resolve('ts-loader')
+      },
+      {
+        loader: require.resolve('react-docgen-typescript-loader')
       }
     ]
-  })
-  config.resolve.extensions.push('.stories.ts', '.stories.tsx')
-  return config
-}
+  });
+
+  config.module.rules.push({
+    test: /\.scss$/,
+    loaders: ['style-loader', 'css-loader', 'sass-loader']
+  });
+
+  config.resolve.extensions.push('.stories.ts', '.stories.tsx');
+  return config;
+};

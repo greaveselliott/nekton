@@ -1,0 +1,75 @@
+@import '../global';
+
+$button-font: $global-font-family-primary;
+$button-primary-text-color: $global-color-shade-one;
+$button-primary-background-color: $global-color-primary;
+$button-primary-border-color: $global-color-primary;
+$button-secondary-text-color: $global-color-primary;
+$button-negative-border-color: $global-color-negative;
+$button-negative-text-color: $global-color-negative;
+$button-negative-disabled-border-color: $global-color-negative-muted;
+$button-negative-hover-border-color: $global-color-negative;
+$button-negative-hover-background-color: $global-color-negative-muted;
+
+.button {
+  border-style: solid;
+  border-width: 1px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  font-family: $button-font;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--primary {
+    color: $button-primary-text-color;
+    background-color: $button-primary-background-color;
+    border-color: $button-primary-text-color;
+  }
+
+  &--secondary {
+    border-color: $button-primary-border-color;
+    color: $button-secondary-text-color;
+  }
+
+  &--default {
+    padding: 10px 14px;
+    border-radius: 50px;
+    width: 100%;
+    height: 40px;
+  }
+
+  &--negative {
+    border-color: $button-negative-border-color;
+    color: $button-negative-text-color;
+
+    &:hover:not([disabled]) {
+      background-color: $button-negative-hover-background-color;
+      border-color: $button-negative-hover-border-color;
+    }
+
+    &[disabled] {
+      border-color: $button-negative-disabled-border-color;
+    }
+  }
+
+  &--round {
+    border-radius: 50%;
+
+    &--small {
+      height: 30px;
+      width: 30px;
+    }
+
+    &--medium {
+      height: 52px;
+      width: 52px;
+    }
+
+    &--large {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}
