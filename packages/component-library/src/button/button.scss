@@ -2,13 +2,16 @@
 
 $button-font: $global-font-family-primary;
 $button-disabled-background-color: $global-color-disabled;
-$button-disabled-text-color: $global-color-disabled-text;
+$button-disabled-text-color: $global-color-shade-three;
 $button-disabled-border-color: $global-color-disabled;
 $button-primary-text-color: $global-color-shade-one;
 $button-primary-background-color: $global-color-primary;
 $button-primary-border-color: $global-color-primary;
 $button-primary-hover-background-color: $global-color-primary-dark;
 $button-secondary-text-color: $global-color-primary;
+$button-secondary-hover-background-color: $global-color-primary-muted;
+$button-secondary-hover-border-color: $global-color-primary-muted;
+$button-secondary-hover-text-color: $global-color-shade-two;
 $button-negative-border-color: $global-color-negative;
 $button-negative-text-color: $global-color-negative;
 $button-negative-hover-border-color: $global-color-negative;
@@ -44,6 +47,11 @@ $button-negative-hover-background-color: $global-color-negative-muted;
   &--secondary {
     border-color: $button-primary-border-color;
     color: $button-secondary-text-color;
+    &:hover:not([disabled]) {
+      background-color: $button-secondary-hover-background-color;
+      color: $button-secondary-hover-text-color;
+      border-color: $button-secondary-hover-border-color;
+    }
   }
 
   &--default {
