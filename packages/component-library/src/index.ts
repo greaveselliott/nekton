@@ -1,5 +1,1 @@
-export default function logger(message: string): void {
-  console.log(message)
-
-  return
-}
+export { default as Button } from './button/';
