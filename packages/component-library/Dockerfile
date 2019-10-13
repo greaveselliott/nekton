@@ -8,9 +8,6 @@ WORKDIR /tmp/app
 
 COPY . .
 
-RUN ls
-RUN cat package.json
-
 # Build project files
 RUN npx yarn install
 RUN npx yarn build-storybook
@@ -22,7 +19,5 @@ FROM nginx
 WORKDIR /usr/share/nginx/html
 
 COPY --from=build /tmp/app/dist .
-
-RUN ls -la /usr/share/nginx/html
 
 EXPOSE 80
