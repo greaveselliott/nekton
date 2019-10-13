@@ -21,7 +21,7 @@ jobs:
       - name: Lint
         run: npx yarn workspace @nekton/component-library run lint
       - name: Build
-        run: npx yarn workspace @nekton/component-library run npx build-storybook
+        run: npx yarn workspace @nekton/component-library run build-storybook
       - name: Unit tests
         run: npx yarn workspace @nekton/component-library test:unit
       - uses: actions/checkout@master
