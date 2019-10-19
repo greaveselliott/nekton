@@ -58,13 +58,14 @@ jobs:
           CI: true
       - name: Deploy
         uses: "maddox/actions/ssh@master"
-        args:
-          - docker kill ${{ secrets.DOCKER_CONTAINER_NAME }}
-          - docker rm ${{ secrets.DOCKER_CONTAINER_COMPONENT_LIBRARY_ALIAS }}
-          - docker pull ${{ secrets.DOCKER_COMPONENT_LIBRARY_CONTAINER }}
-          - docker run --name ${{ secrets.DOCKER_CONTAINER_COMPONENT_LIBRARY_ALIAS }} -p 80:80 -d ${{ DOCKER_COMPONENT_LIBRARY_CONTAINER }}
-          - exit
-        secrets:
-          - ${{ secrets.PRIVATE_SSH_KEY }}
-          - ${{ secrets.DIGITAL_OCEAN_DROPLET_HOST }}
-          - ${{ secrets.DIGITAL_OCEAN_DROPLET_USER }}
+        with:
+          args:
+            - docker kill ${{ secrets.DOCKER_CONTAINER_NAME }}
+            - docker rm ${{ secrets.DOCKER_CONTAINER_COMPONENT_LIBRARY_ALIAS }}
+            - docker pull ${{ secrets.DOCKER_COMPONENT_LIBRARY_CONTAINER }}
+            - docker run --name ${{ secrets.DOCKER_CONTAINER_COMPONENT_LIBRARY_ALIAS }} -p 80:80 -d ${{ DOCKER_COMPONENT_LIBRARY_CONTAINER }}
+            - exit
+          secrets:
+            - ${{ secrets.PRIVATE_SSH_KEY }}
+            - ${{ secrets.DIGITAL_OCEAN_DROPLET_HOST }}
+            - ${{ secrets.DIGITAL_OCEAN_DROPLET_USER }}
