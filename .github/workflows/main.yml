@@ -36,16 +36,16 @@ jobs:
           CI: true
       - name: Deploy
         uses: fifsky/ssh-action@master
-          with:
-            command: |
-              docker kill ${{ secrets.DOCKER_CONTAINER_NAME }}
-              docker rm ${{ secrets.DOCKER_CONTAINER_NAME }}
-              docker pull ${{ secrets.DOCKER_COMPONENT_LIBRARY_IMAGE }}
-              docker run --name ${{ secrets.DOCKER_CONTAINER_NAME }} -p 80:80 -d ${{ DOCKER_COMPONENT_LIBRARY_IMAGE }}
-              exit
-            host: ${{ secrets.DIGITAL_OCEAN_DROPLET_HOST }}
-            user: ${{ secrets.DIGITAL_OCEAN_DROPLET_USER }}
-            key: ${{ secrets.PRIVATE_SSH_KEY}}
+        with:
+          command: |
+            docker kill ${{ secrets.DOCKER_CONTAINER_NAME }}
+            docker rm ${{ secrets.DOCKER_CONTAINER_NAME }}
+            docker pull ${{ secrets.DOCKER_COMPONENT_LIBRARY_IMAGE }}
+            docker run --name ${{ secrets.DOCKER_CONTAINER_NAME }} -p 80:80 -d ${{ DOCKER_COMPONENT_LIBRARY_IMAGE }}
+            exit
+          host: ${{ secrets.DIGITAL_OCEAN_DROPLET_HOST }}
+          user: ${{ secrets.DIGITAL_OCEAN_DROPLET_USER }}
+          key: ${{ secrets.PRIVATE_SSH_KEY}}
 
   dive-log-ci:
     runs-on: ubuntu-latest
