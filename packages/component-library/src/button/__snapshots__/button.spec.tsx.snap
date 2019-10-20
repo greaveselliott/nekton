@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders a link as expected 1`] = `
+<a
+  className="button button--secondary button--default"
+  href="#"
+/>
+`;
+
+exports[`Button renders as expected 1`] = `
+<button
+  className="button button--secondary button--round button--round--small"
+/>
+`;
