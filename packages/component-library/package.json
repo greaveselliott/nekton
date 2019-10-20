@@ -35,7 +35,7 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "testRegex": ".spec.(ts|tsx)$",
     "moduleNameMapper": {
       ".+\\.(css|less|sass|scss)$": "jest-transform-css"
     }
