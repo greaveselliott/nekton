@@ -35,17 +35,21 @@ jobs:
         env:
           CI: true
       - name: Deploy
-        uses: fifsky/ssh-action@master
+        uses: appleboy/ssh-action@master
         with:
-          command: |
+          host: ${{ secrets.DROPLET_HOST}}
+          username: ${{ secrets.DROPLET_USER }}
+          key: ${{ secrets.DIGITAL_OCEAN_DROPLET_SSH }}
+          port: 22
+          script: |
+            docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             docker kill ${{ secrets.DOCKER_CONTAINER_NAME }}
             docker rm ${{ secrets.DOCKER_CONTAINER_NAME }}
+            docker ps --all
             docker pull ${{ secrets.DOCKER_COMPONENT_LIBRARY_IMAGE }}
-            docker run --name ${{ secrets.DOCKER_CONTAINER_NAME }} -p 80:80 -d ${{ DOCKER_COMPONENT_LIBRARY_IMAGE }}
+            docker run --name ${{ secrets.DOCKER_CONTAINER_NAME }} -p 80:80 -d ${{ secrets.DOCKER_COMPONENT_LIBRARY_IMAGE }}
+            docker ps --all
             exit
-          host: ${{ secrets.DIGITAL_OCEAN_DROPLET_HOST }}
-          user: ${{ secrets.DIGITAL_OCEAN_DROPLET_USER }}
-          key: ${{ secrets.PRIVATE_SSH_KEY}}
 
   dive-log-ci:
     runs-on: ubuntu-latest
