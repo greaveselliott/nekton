@@ -13,9 +13,9 @@
   },
   "jest": {
     "moduleFileExtensions": [
+      "js",
       "ts",
-      "tsx",
-      "js"
+      "tsx"
     ],
     "setupFilesAfterEnv": [
       "jest-enzyme",
@@ -26,8 +26,8 @@
       "enzymeAdapter": "react16"
     },
     "transform": {
-      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest",
-      ".+\\.(css|less|sass|scss)$": "jest-transform-css"
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      ".+\\.scss$": "jest-transform-css"
     },
     "setupFiles": [
       "raf/polyfill"
