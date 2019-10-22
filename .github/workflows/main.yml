@@ -23,7 +23,7 @@ jobs:
       - name: Build
         run: npx yarn workspace @nekton/component-library run build-storybook
       - name: Unit tests
-        run: npx yarn workspace @nekton/component-library test:unit
+        run: npx jest
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
