@@ -26,7 +26,7 @@
       "enzymeAdapter": "react16"
     },
     "transform": {
-      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      "\\.(ts|tsx)$": "ts-jest",
       ".+\\.scss$": "jest-transform-css"
     },
     "setupFiles": [
