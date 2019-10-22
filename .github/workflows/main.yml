@@ -50,24 +50,3 @@ jobs:
             docker run --name ${{ secrets.DOCKER_CONTAINER_NAME }} -p 80:80 -d ${{ secrets.DOCKER_COMPONENT_LIBRARY_IMAGE }}
             docker ps --all
             exit
-
-  dive-log-ci:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install
-        run: |
-          npx yarn
-          npx lerna bootstrap
-      - name: Lint
-        run: npx yarn workspace @nekton/dive-log run lint;
-      - name: Build
-        run: npx yarn workspace @nekton/dive-log run compile
-      - name: Unit tests
-        run: npx yarn workspace @nekton/dive-log test:unit
-        env:
-          CI: true
