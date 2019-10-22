@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './button.tsx';
+import Button from './button.component.tsx';
 
 export default { title: 'Button' };
 
