@@ -16,11 +16,11 @@ describe('Button', () => {
   });
 
   it('renders a button elemement as default', () => {
-    expect(shallow(<Button />)).toContainMatchingElement('button');
+    expect(shallow(<Button />)).toMatchSnapshot();
   });
 
   it('renders an anchor tag if given a href', () => {
-    expect(shallow(<Button href="#" />)).toContainMatchingElement('a');
+    expect(shallow(<Button href="#" />)).toMatchSnapshot();
   });
 
   it('is able to call a function on click', () => {
@@ -31,10 +31,10 @@ describe('Button', () => {
   });
 
   it('can be disabled', () => {
-    expect(shallow(<Button disabled />)).toBeDisabled();
+    expect(shallow(<Button disabled />)).toMatchSnapshot();
   });
 
   it('can render children', () => {
-    expect(shallow(<Button disabled>abc</Button>)).toIncludeText('abc');
+    expect(shallow(<Button disabled>abc</Button>)).toMatchSnapshot();
   });
 });
