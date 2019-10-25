@@ -1,5 +1,5 @@
 import React from 'react';
-import './text.scss';
+import './typography.scss';
 
 type props = {
   text: string;

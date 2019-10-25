@@ -1,8 +1,12 @@
 import React from 'react';
 import HeadingOne from './headingOne.component.tsx';
+import HeadingTwo from './headingTwo.component.tsx';
 
 export default { title: 'Typography' };
 
-export const headingOne = () => (
+export const headings = () => (
+  <React.Fragment>
   <HeadingOne text="Some Larger Text"/>
+  <HeadingTwo text="Some Large Text"/>
+  </React.Fragment>
 );
