@@ -4,12 +4,12 @@ import './typography.scss';
 type props = {
   text: string;
 }
-const HeadingTwo: React.FC<props> = ({
+const HeadingThree: React.FC<props> = ({
   text
 }) => {
   return(
-    <h2 className='heading-two'>{text}</h2>
+    <h3 className='heading-three'>{text}</h3>
   )
 }
 
-export default HeadingTwo;
+export default HeadingThree;
