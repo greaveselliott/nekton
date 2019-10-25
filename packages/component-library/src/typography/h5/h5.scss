@@ -1,0 +1,17 @@
+@import '../../global/global-variables.scss';
+
+$h5-font-family: $global-font-family-primary;
+$h5-font-weight: $global-font-weight-300;
+$h5-font-size: $global-font-size-500;
+$h5-color: $global-font-color-primary;
+$h5-line-height: 13px;
+$h5-margin-bottom: $global-gutter-300;
+
+.heading-five {
+  color: $h5-color;
+  font-family: $h5-font-family;
+  font-size: $h5-font-size;
+  font-weight: $h5-font-weight;
+  line-height: $h5-line-height;
+  margin-bottom: $h5-margin-bottom;
+}

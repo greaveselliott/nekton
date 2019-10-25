@@ -1,14 +1,21 @@
 import React from 'react';
-import HeadingOne from './headingOne.component.tsx';
-import HeadingTwo from './headingTwo.component.tsx';
-import HeadingThree from './headingThree.component.tsx';
+
+import H1 from './h1/h1.component.tsx';
+import H2 from './h2/h2.component.tsx';
+import H3 from './h3/h3.component.tsx';
+import H4 from './h4/h4.component.tsx';
+import H5 from './h5/h5.component.tsx';
+import H6 from './h6/h6.component.tsx';
 
 export default { title: 'Typography' };
 
-export const headings = () => (
-  <React.Fragment>
-    <HeadingOne text="Some Larger Text"/>
-    <HeadingTwo text="Some Large Text"/>
-    <HeadingThree text="Some Medium Text"/>
-  </React.Fragment>
+export const Headings = () => (
+  <>
+    <H1>Heading one</H1>
+    <H2>Heading two</H2>
+    <H3>Heading three</H3>
+    <H4>Heading four</H4>
+    <H5>Heading five</H5>
+    <H6>Heading six</H6>
+  </>
 );
