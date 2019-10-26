@@ -1,1 +1,6 @@
-@function rem-calc($size: );
+@import './global-reset-variables.scss';
+
+@function rem-calc($size, $base-size: $global-reset-variables-font-size) {
+  $remSize: $size / $base-size;
+  @return #{$remSize}rem;
+}

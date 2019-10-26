@@ -6,6 +6,7 @@ import H3 from './h3/h3.component.tsx';
 import H4 from './h4/h4.component.tsx';
 import H5 from './h5/h5.component.tsx';
 import H6 from './h6/h6.component.tsx';
+import P from './paragraph/paragraph.component.tsx';
 
 export default { title: 'Typography' };
 
@@ -17,5 +18,11 @@ export const Headings = () => (
     <H4>Heading four</H4>
     <H5>Heading five</H5>
     <H6>Heading six</H6>
+  </>
+);
+
+export const Paragraph = () => (
+  <>
+    <P>A great dive on the Black pearl, great visability.</P>
   </>
 );

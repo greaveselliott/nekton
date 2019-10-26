@@ -1,15 +1,20 @@
-$global-font-family-primary: 'Mada', sans-serif;
+@import './global-functions.scss';
 
-$global-font-weight-100: light;
-$global-font-weight-300: normal;
-$global-font-weight-500: bold;
+$global-font-family-titles: 'Mada', sans-serif;
+$global-font-family-body: 'Roboto', sans-serif;
 
-$global-font-size-100: 18px;
-$global-font-size-200: 14px;
-$global-font-size-300: 13px;
-$global-font-size-400: 12px;
-$global-font-size-500: 11px;
-$global-font-size-600: 8px;
+$global-font-weight-500: 500;
+$global-font-weight-300: 400;
+$global-font-weight-100: 100;
+
+$global-line-height-400: 1.3em;
+
+$global-font-size-600: rem-calc(18);
+$global-font-size-500: rem-calc(14);
+$global-font-size-400: rem-calc(13);
+$global-font-size-300: rem-calc(12);
+$global-font-size-200: rem-calc(11);
+$global-font-size-100: rem-calc(8);
 
 $global-color-primary: #2d9cdb;
 $global-color-primary-dark: #2e6bbd;
@@ -24,4 +29,4 @@ $global-font-color-primary: #283742;
 $global-font-color-secondary: #2f80ed;
 $global-font-color-muted: #828282;
 
-$global-gutter-300: 12px;
+$global-gutter-300: rem-calc(12);
