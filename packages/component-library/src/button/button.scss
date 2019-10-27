@@ -66,9 +66,12 @@ $button-round-large-size: rem-calc(70);
     background-color: $button-primary-background-color;
     border-color: $button-primary-border-color;
 
-    &:hover:not([disabled]) {
-      background-color: $button-primary-hover-background-color;
-      border-color: $button-primary-hover-border-color;
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        background-color: $button-primary-hover-background-color;
+        border-color: $button-primary-hover-border-color;
+      }
     }
   }
 
@@ -76,10 +79,13 @@ $button-round-large-size: rem-calc(70);
     border-color: $button-primary-border-color;
     color: $button-secondary-text-color;
 
-    &:hover:not([disabled]) {
-      background-color: $button-secondary-hover-background-color;
-      color: $button-secondary-hover-text-color;
-      border-color: $button-secondary-hover-border-color;
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        background-color: $button-secondary-hover-background-color;
+        color: $button-secondary-hover-text-color;
+        border-color: $button-secondary-hover-border-color;
+      }
     }
   }
 
@@ -94,10 +100,13 @@ $button-round-large-size: rem-calc(70);
     border-color: $button-negative-border-color;
     color: $button-negative-text-color;
 
-    &:hover:not([disabled]) {
-      color: $button-negative-hover-color;
-      background-color: $button-negative-hover-background-color;
-      border-color: $button-negative-hover-border-color;
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        color: $button-negative-hover-color;
+        background-color: $button-negative-hover-background-color;
+        border-color: $button-negative-hover-border-color;
+      }
     }
   }
 
