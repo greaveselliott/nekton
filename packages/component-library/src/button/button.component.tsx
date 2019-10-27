@@ -10,7 +10,6 @@ export interface props
   children?: React.ReactChild | React.ReactChild[];
   disabled?: boolean;
   href?: string;
-  onClick?: () => void;
 }
 
 const Button: React.FC<props> = ({
