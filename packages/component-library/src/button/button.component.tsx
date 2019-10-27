@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import './button.scss';
 
-export interface IProps
+export interface props
   extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   shape?: 'default' | 'round';
   variant?: 'primary' | 'secondary' | 'negative';
@@ -13,7 +13,7 @@ export interface IProps
   onClick?: () => void;
 }
 
-const Button: React.FC<IProps> = ({
+const Button: React.FC<props> = ({
   children,
   variant = 'primary',
   shape = 'default',
