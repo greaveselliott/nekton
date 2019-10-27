@@ -85,6 +85,7 @@ $button-round-large-size: rem-calc(70);
         background-color: $button-secondary-hover-background-color;
         color: $button-secondary-hover-text-color;
         border-color: $button-secondary-hover-border-color;
+        box-shadow: inset-shadow($global-color-primary-350);
       }
     }
   }
@@ -106,6 +107,7 @@ $button-round-large-size: rem-calc(70);
         color: $button-negative-hover-color;
         background-color: $button-negative-hover-background-color;
         border-color: $button-negative-hover-border-color;
+        box-shadow: inset-shadow($global-color-secondary-350);
       }
     }
   }

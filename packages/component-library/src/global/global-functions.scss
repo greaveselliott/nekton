@@ -4,3 +4,7 @@
   $remSize: $size / $base-size;
   @return #{$remSize}rem;
 }
+
+@function inset-shadow($color) {
+  @return 0px 0px 15px #{$color} inset;
+}
