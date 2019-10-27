@@ -8,7 +8,8 @@ module.exports = ({ config }) => {
       {
         loader: require.resolve('react-docgen-typescript-loader')
       }
-    ]
+    ],
+    exclude: '/**/*.spec.tsx'
   });
 
   config.module.rules.push({
@@ -17,5 +18,8 @@ module.exports = ({ config }) => {
   });
 
   config.resolve.extensions.push('.stories.ts', '.stories.tsx');
+
+  config.i;
+
   return config;
 };
