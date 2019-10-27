@@ -1,17 +1,23 @@
-@import '../../global/global-variables.scss';
+@import '../../global';
 
-$h1-font-family: $global-font-family-titles;
-$h1-font-weight: $global-font-weight-500;
-$h1-font-size: $global-font-size-600;
-$h1-color: $global-color-shade-500;
-$h1-line-height: $global-line-height-400;
-$h1-margin-bottom: $global-gutter-300;
+$link-font-family: $global-font-family-body;
+$link-font-weight: $global-font-weight-400;
+$link-font-size: $global-font-size-400;
+$link-color: $global-color-primary-400;
+$link-line-height: $global-line-height-400;
 
-.heading-one {
-  color: $h1-color;
-  font-family: $h1-font-family;
-  font-size: $h1-font-size;
-  font-weight: $h1-font-weight;
-  line-height: $h1-line-height;
-  margin-bottom: $h1-margin-bottom;
+.link {
+  color: $link-color;
+  font-family: $link-font-family;
+  font-size: $link-font-size;
+  font-weight: $link-font-weight;
+  line-height: $link-line-height;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include accessibility-focus-outline;
 }

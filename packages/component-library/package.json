@@ -9,7 +9,7 @@
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
     "compile": "npx tsc -b tsconfig.json",
     "lint": "npx eslint ./ --config '../../.eslintrc' --ignore-path '../../.eslintignore' --ext '.ts,.tsx'",
-    "test:unit": "npx jest --passWithNoTests --verbose --config=../../config/jest/jest.config.js"
+    "test:unit": "npx jest --passWithNoTests --verbose --config=../../jest.config.js"
   },
   "devDependencies": {
     "@storybook/react": "^5.2.3",

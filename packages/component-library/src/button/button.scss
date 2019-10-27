@@ -50,6 +50,9 @@ $button-round-large-size: rem-calc(70);
   cursor: pointer;
   box-sizing: border-box;
   margin-bottom: $button-margin-bottom;
+  transition: background-color 120ms ease-in, box-shadow 120ms ease-in;
+
+  @include accessibility-focus-outline;
 
   &:last-child {
     margin-bottom: 0;
@@ -61,6 +64,7 @@ $button-round-large-size: rem-calc(70);
     border-color: $button-disabled-border-color;
     cursor: not-allowed;
   }
+
   &--primary {
     color: $button-primary-text-color;
     background-color: $button-primary-background-color;

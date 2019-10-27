@@ -25,14 +25,12 @@ exports[`Button renders a button elemement as default 1`] = `
 exports[`Button renders a link as expected 1`] = `
 <a
   className="button button--secondary button--default"
-  href="#"
 />
 `;
 
 exports[`Button renders an anchor tag if given a href 1`] = `
 <a
   className="button button--primary button--default"
-  href="#"
 />
 `;
 

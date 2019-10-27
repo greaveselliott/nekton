@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { FC, AnchorHTMLAttributes } from 'react';
 import './link.scss';
 
-const Link: React.FC = ({ children }) => {
-  return <a className="link">{children}</a>;
+const Link: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
+  children,
+  href,
+  ...props
+}) => {
+  return (
+    <a {...props} className="link" href={href}>
+      {children}
+    </a>
+  );
 };
 
 export default Link;
