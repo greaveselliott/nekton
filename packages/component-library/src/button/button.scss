@@ -33,12 +33,16 @@ $button-negative-hover-color: $global-color-shade-500;
 $button-negative-hover-border-color: $global-color-secondary-400;
 $button-negative-hover-background-color: $global-color-secondary-300;
 
+$button-round-small-size: rem-calc(30);
+$button-round-medium-size: rem-calc(52);
+$button-round-large-size: rem-calc(70);
+
 .button {
   border-style: $button-border-style;
   border-width: $button-border-width;
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: $global-font-weight-500;
   font-size: $button-font-size;
   line-height: $button-line-height;
   font-family: $button-font;
@@ -101,18 +105,18 @@ $button-negative-hover-background-color: $global-color-secondary-300;
     border-radius: 50%;
 
     &--small {
-      height: 30px;
-      width: 30px;
+      height: $button-round-small-size;
+      width: $button-round-small-size;
     }
 
     &--medium {
-      height: 52px;
-      width: 52px;
+      height: $button-round-medium-size;
+      width: $button-round-medium-size;
     }
 
     &--large {
-      height: 70px;
-      width: 70px;
+      height: $button-round-large-size;
+      width: $button-round-large-size;
     }
   }
 }
