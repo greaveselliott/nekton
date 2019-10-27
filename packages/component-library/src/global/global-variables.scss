@@ -4,7 +4,7 @@ $global-font-family-titles: 'Mada', sans-serif;
 $global-font-family-body: 'Roboto', sans-serif;
 
 $global-font-weight-500: 500;
-$global-font-weight-300: 400;
+$global-font-weight-400: 400;
 $global-font-weight-100: 100;
 
 $global-line-height-400: 1.6em;
@@ -16,17 +16,18 @@ $global-font-size-300: rem-calc(12);
 $global-font-size-200: rem-calc(11);
 $global-font-size-100: rem-calc(8);
 
-$global-color-primary: #2d9cdb;
-$global-color-primary-dark: #2e6bbd;
-$global-color-disabled: #ebebeb;
-$global-color-negative: #f92c53;
-$global-color-negative-muted: #fb8098;
-$global-color-primary-muted: #81c4ec;
-$global-color-shade-one: #ffffff;
-$global-color-shade-two: #4a4a49;
-$global-color-shade-three: #818181;
-$global-font-color-primary: #283742;
-$global-font-color-secondary: #2f80ed;
-$global-font-color-muted: #828282;
+$global-color-primary-300: #8fc1e0;
+$global-color-primary-400: #267bab;
+$global-color-primary-500: #246c94;
+
+$global-color-secondary-400: #dc2c4d;
+$global-color-secondary-300: #fb8098;
+
+$global-color-shade-100: #ffffff;
+$global-color-shade-200: #ebebeb;
+$global-color-shade-300: #818181;
+$global-color-shade-400: #4a4a49;
+$global-color-shade-500: #283742;
+$global-color-shade-600: #2a2c2d;
 
 $global-gutter-300: rem-calc(12);

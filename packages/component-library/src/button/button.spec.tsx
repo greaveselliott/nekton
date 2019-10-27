@@ -5,13 +5,13 @@ import { Button } from '.';
 describe('Button', () => {
   it('renders as expected', () => {
     expect(
-      shallow(<Button type="round" style="secondary" size="small" />)
+      shallow(<Button shape="round" variant="secondary" size="small" />)
     ).toMatchSnapshot();
   });
 
   it('renders a link as expected', () => {
     expect(
-      shallow(<Button href="#" type="default" style="secondary" />)
+      shallow(<Button href="#" shape="default" variant="secondary" />)
     ).toMatchSnapshot();
   });
 
