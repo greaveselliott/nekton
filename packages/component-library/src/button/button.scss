@@ -1,34 +1,61 @@
 @import '../global';
 
-$button-font: $global-font-family-primary;
-$button-disabled-background-color: $global-color-disabled;
-$button-disabled-text-color: $global-color-shade-three;
-$button-disabled-border-color: $global-color-disabled;
-$button-primary-text-color: $global-color-shade-one;
-$button-primary-background-color: $global-color-primary;
-$button-primary-border-color: $global-color-primary;
-$button-primary-hover-background-color: $global-color-primary-dark;
-$button-secondary-text-color: $global-color-primary;
-$button-secondary-hover-background-color: $global-color-primary-muted;
-$button-secondary-hover-border-color: $global-color-primary-muted;
-$button-secondary-hover-text-color: $global-color-shade-two;
-$button-negative-border-color: $global-color-negative;
-$button-negative-text-color: $global-color-negative;
-$button-negative-hover-border-color: $global-color-negative;
-$button-negative-hover-background-color: $global-color-negative-muted;
+$button-font: $global-font-family-titles;
+$button-font-size: rem-calc(14);
+$button-line-height: rem-calc(18);
+$button-border-style: solid;
+$button-border-width: rem-calc(1);
+$button-margin-bottom: $global-gutter-300;
+
+$button-defualt-padding: rem-calc(10) rem-calc(14);
+$button-default-border-radius: rem-calc(50);
+$button-default-width: 100%;
+$button-default-height: rem-calc(40);
+
+$button-disabled-background-color: $global-color-shade-200;
+$button-disabled-text-color: $global-color-shade-400;
+$button-disabled-border-color: $global-color-shade-200;
+
+$button-primary-text-color: $global-color-shade-100;
+$button-primary-background-color: $global-color-primary-400;
+$button-primary-border-color: $global-color-primary-400;
+$button-primary-hover-background-color: $global-color-primary-500;
+$button-primary-hover-border-color: $global-color-primary-500;
+
+$button-secondary-text-color: $global-color-primary-400;
+$button-secondary-hover-background-color: $global-color-primary-300;
+$button-secondary-hover-border-color: $global-color-primary-400;
+$button-secondary-hover-text-color: $global-color-shade-400;
+
+$button-negative-border-color: $global-color-secondary-400;
+$button-negative-text-color: $global-color-secondary-400;
+$button-negative-hover-color: $global-color-shade-500;
+$button-negative-hover-border-color: $global-color-secondary-400;
+$button-negative-hover-background-color: $global-color-secondary-300;
+
+$button-round-small-size: rem-calc(30);
+$button-round-medium-size: rem-calc(52);
+$button-round-large-size: rem-calc(70);
 
 .button {
-  border-style: solid;
-  border-width: 1px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
-  box-sizing: border-box;
+  border-style: $button-border-style;
+  border-width: $button-border-width;
+  display: flex;
+  justify-content: center;
+  font-weight: $global-font-weight-500;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
   font-family: $button-font;
   text-decoration: none;
   cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: $button-margin-bottom;
 
-  &:disabled {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &[disabled] {
     background-color: $button-disabled-background-color;
     color: $button-disabled-text-color;
     border-color: $button-disabled-border-color;
@@ -37,37 +64,51 @@ $button-negative-hover-background-color: $global-color-negative-muted;
   &--primary {
     color: $button-primary-text-color;
     background-color: $button-primary-background-color;
-    border-color: $button-primary-text-color;
-    &:hover:not([disabled]) {
-      background-color: $button-primary-hover-background-color;
-      color: $button-primary-text-color;
+    border-color: $button-primary-border-color;
+
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        background-color: $button-primary-hover-background-color;
+        border-color: $button-primary-hover-border-color;
+      }
     }
   }
 
   &--secondary {
     border-color: $button-primary-border-color;
     color: $button-secondary-text-color;
-    &:hover:not([disabled]) {
-      background-color: $button-secondary-hover-background-color;
-      color: $button-secondary-hover-text-color;
-      border-color: $button-secondary-hover-border-color;
+
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        background-color: $button-secondary-hover-background-color;
+        color: $button-secondary-hover-text-color;
+        border-color: $button-secondary-hover-border-color;
+        box-shadow: inset-shadow($global-color-primary-350);
+      }
     }
   }
 
   &--default {
-    padding: 10px 14px;
-    border-radius: 50px;
-    width: 100%;
-    height: 40px;
+    padding: $button-defualt-padding;
+    border-radius: $button-default-border-radius;
+    width: $button-default-width;
+    height: $button-default-height;
   }
 
   &--negative {
     border-color: $button-negative-border-color;
     color: $button-negative-text-color;
 
-    &:hover:not([disabled]) {
-      background-color: $button-negative-hover-background-color;
-      border-color: $button-negative-hover-border-color;
+    &:hover,
+    &:focus {
+      &:not([disabled]) {
+        color: $button-negative-hover-color;
+        background-color: $button-negative-hover-background-color;
+        border-color: $button-negative-hover-border-color;
+        box-shadow: inset-shadow($global-color-secondary-350);
+      }
     }
   }
 
@@ -75,18 +116,18 @@ $button-negative-hover-background-color: $global-color-negative-muted;
     border-radius: 50%;
 
     &--small {
-      height: 30px;
-      width: 30px;
+      height: $button-round-small-size;
+      width: $button-round-small-size;
     }
 
     &--medium {
-      height: 52px;
-      width: 52px;
+      height: $button-round-medium-size;
+      width: $button-round-medium-size;
     }
 
     &--large {
-      height: 70px;
-      width: 70px;
+      height: $button-round-large-size;
+      width: $button-round-large-size;
     }
   }
 }

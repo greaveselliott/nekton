@@ -2,38 +2,35 @@ import React from 'react';
 import classNames from 'classnames';
 import './button.scss';
 
-type props = {
-  type?: 'default' | 'round';
-  style?: 'primary' | 'secondary' | 'negative';
+export interface props
+  extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
+  shape?: 'default' | 'round';
+  variant?: 'primary' | 'secondary' | 'negative';
   size?: 'large' | 'medium' | 'small';
+  children?: React.ReactChild | React.ReactChild[];
   disabled?: boolean;
-  children?: React.ReactNode;
-  onClick?: () => void;
   href?: string;
-};
+}
 
 const Button: React.FC<props> = ({
   children,
-  style,
-  disabled,
-  type,
+  variant = 'primary',
+  shape = 'default',
   size,
-  onClick,
-  href
+  href = '',
+  ...props
 }) => {
   const Element = href ? 'a' : 'button';
 
   return (
     <Element
+      {...props}
       className={classNames({
         button: true,
-        [`button--${style}`]: style,
-        [`button--${type}`]: type,
+        [`button--${variant}`]: variant,
+        [`button--${shape}`]: shape,
         [`button--round--${size}`]: size
       })}
-      disabled={disabled}
-      onClick={onClick}
-      href={href}
     >
       {children}
     </Element>
@@ -41,8 +38,3 @@ const Button: React.FC<props> = ({
 };
 
 export default Button;
-
-Button.defaultProps = {
-  type: 'default',
-  style: 'primary'
-};

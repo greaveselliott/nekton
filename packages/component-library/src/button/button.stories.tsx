@@ -3,80 +3,65 @@ import Button from './button.component.tsx';
 
 export default { title: 'Button' };
 
-export const defaultPrimaryButtonWithText = () => (
-  <Button style="primary">
-    <span>Primary Button</span>
-  </Button>
+export const Pill = () => (
+  <>
+    <Button>Primary Button</Button>
+    <Button disabled>Disabled Button</Button>
+    <Button variant="secondary">Secondary Button</Button>
+    <Button variant="negative">Negative Button</Button>
+  </>
 );
 
-export const defaultPrimaryDisabledButtonWithText = () => (
-  <Button style="primary" disabled>
-    <span>Primary Button</span>
-  </Button>
+export const SmallRound = () => (
+  <>
+    <Button shape="round" size="small" />
+    <Button shape="round" size="small" disabled />
+    <Button shape="round" size="small" variant="secondary" />
+    <Button shape="round" size="small" variant="negative" />
+  </>
 );
 
-export const defaultSecondaryButtonWithText = () => (
-  <Button type="default" style="secondary">
-    <span>Secondary Button</span>
-  </Button>
+export const MediumRound = () => (
+  <>
+    <Button shape="round" size="medium" />
+    <Button shape="round" size="medium" disabled />
+    <Button shape="round" size="medium" variant="secondary" />
+    <Button shape="round" size="medium" variant="negative" />
+  </>
 );
 
-export const smallRoundPrimaryButton = () => (
-  <Button type="round" style="primary" size="small"></Button>
+export const LargeRound = () => (
+  <>
+    <Button shape="round" size="large" />
+    <Button shape="round" size="large" disabled />
+    <Button shape="round" size="large" variant="secondary" />
+    <Button shape="round" size="large" variant="negative" />
+  </>
 );
 
-export const smallRoundSecondaryButton = () => (
-  <Button type="round" style="secondary" size="small"></Button>
-);
-
-export const smallRoundDisabledButton = () => (
-  <Button type="round" style="secondary" size="small" disabled></Button>
-);
-
-export const mediumRoundPrimaryButton = () => (
-  <Button type="round" style="primary" size="medium"></Button>
-);
-
-export const mediumRoundSecondaryButton = () => (
-  <Button type="round" style="secondary" size="medium"></Button>
-);
-
-export const mediumRoundSecondaryDisabledButton = () => (
-  <Button type="round" style="secondary" size="medium" disabled></Button>
-);
-
-export const largeRoundPrimaryButton = () => (
-  <Button type="round" style="primary" size="large"></Button>
-);
-
-export const largeRoundSecondaryButton = () => (
-  <Button type="round" style="secondary" size="large"></Button>
-);
-
-export const smallRoundNegativeButton = () => (
-  <Button type="round" style="negative" size="small"></Button>
-);
-
-export const smallRoundNegativeDisabledButton = () => (
-  <Button type="round" style="negative" size="small" disabled></Button>
-);
-
-export const mediumRoundNegativeButton = () => (
-  <Button type="round" style="negative" size="medium"></Button>
-);
-
-export const mediumRoundNegativeDisabledButton = () => (
-  <Button type="round" style="negative" size="medium" disabled></Button>
-);
-
-export const largeRoundNegativeButton = () => (
-  <Button type="round" style="negative" size="large"></Button>
-);
-
-export const largeRoundNegativeDisabledButton = () => (
-  <Button type="round" style="negative" size="large" disabled></Button>
-);
-
-export const defaultPrimaryButtonWithLink = () => (
-  <Button href="#">Some Text</Button>
+export const Link = () => (
+  <>
+    <Button href="#">Primary Button</Button>
+    <Button href="#" disabled>
+      Disabled Button
+    </Button>
+    <Button href="#" variant="secondary">
+      Secondary Button
+    </Button>
+    <Button href="#" variant="negative">
+      Negative Button
+    </Button>
+    <Button href="#" shape="round" size="small" />
+    <Button href="#" shape="round" size="small" disabled />
+    <Button href="#" shape="round" size="small" variant="secondary" />
+    <Button href="#" shape="round" size="small" variant="negative" />
+    <Button href="#" shape="round" size="medium" />
+    <Button href="#" shape="round" size="medium" disabled />
+    <Button href="#" shape="round" size="medium" variant="secondary" />
+    <Button href="#" shape="round" size="medium" variant="negative" />
+    <Button href="#" shape="round" size="large" />
+    <Button href="#" shape="round" size="large" disabled />
+    <Button href="#" shape="round" size="large" variant="secondary" />
+    <Button href="#" shape="round" size="large" variant="negative" />
+  </>
 );
