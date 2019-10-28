@@ -13,19 +13,6 @@ $select-arrow-color-hover: $global-color-primary-500;
 $select-margin-bottom: $global-gutter-300;
 $select-arrow-color-disabled: $global-color-shade-300;
 
-.select-wrapper:after {
-  content: '\25BE';
-  padding: 12px 8px;
-  position: absolute;
-  right: 10px;
-  top: 0;
-  z-index: 1;
-  text-align: center;
-  width: 10%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .select-wrapper {
   position: relative;
   &:not([disabled]) {
@@ -35,6 +22,18 @@ $select-arrow-color-disabled: $global-color-shade-300;
   }
   &[disabled] {
     color: $select-arrow-color-disabled;
+  }
+  &:after {
+    content: '\25BE';
+    padding: 12px 8px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
   }
 }
 
