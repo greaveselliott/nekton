@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select can render a disabled select element 1`] = `
+<div
+  className="select-wrapper"
+>
+  <select
+    className="select-field"
+    disabled={true}
+  >
+    <option
+      value=""
+    >
+      placeholder
+    </option>
+    <option
+      key="option1"
+      value="option1"
+    >
+      Option One
+    </option>
+    <option
+      key="option2"
+      value="option2"
+    >
+      Option Two
+    </option>
+    <option
+      key="option3"
+      value="option3"
+    >
+      Option Three
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Select can render a select element 1`] = `
+<div
+  className="select-wrapper"
+>
+  <select
+    className="select-field"
+    name="test-select"
+  >
+    <option
+      key="option1"
+      value="option1"
+    >
+      Option One
+    </option>
+    <option
+      key="option2"
+      value="option2"
+    >
+      Option Two
+    </option>
+    <option
+      key="option3"
+      value="option3"
+    >
+      Option Three
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Select renders a select element with placeholder text 1`] = `
+<div
+  className="select-wrapper"
+>
+  <select
+    className="select-field"
+  >
+    <option
+      value=""
+    >
+      placeholder
+    </option>
+    <option
+      key="option1"
+      value="option1"
+    >
+      Option One
+    </option>
+    <option
+      key="option2"
+      value="option2"
+    >
+      Option Two
+    </option>
+    <option
+      key="option3"
+      value="option3"
+    >
+      Option Three
+    </option>
+  </select>
+</div>
+`;

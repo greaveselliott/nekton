@@ -1,0 +1,65 @@
+@import '../../global';
+
+$select-background-color: $global-color-shade-200;
+$select-border: 2px solid transparent;
+$select-font-size: $global-font-size-500;
+$select-font-weight: $global-font-weight-500;
+$select-border-radius: rem-calc(50);
+$select-arrow-appearance: none;
+$select-padding: rem-calc(10) rem-calc(14);
+$select-border-hover: 2px solid $global-color-primary-500;
+$select-color-hover: $global-color-primary-500;
+$select-arrow-color-hover: $global-color-primary-500;
+$select-margin-bottom: $global-gutter-300;
+$select-arrow-color-disabled: $global-color-shade-300;
+
+.select-wrapper:after {
+  content: '\25BE';
+  padding: 12px 8px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.select-wrapper {
+  position: relative;
+  &:not([disabled]) {
+    &:hover {
+      color: $select-arrow-color-hover;
+    }
+  }
+  &[disabled] {
+    color: $select-arrow-color-disabled;
+  }
+}
+
+.select-field {
+  @include accessibility-focus-outline;
+  appearance: $select-arrow-appearance;
+  background-color: $select-background-color;
+  border-radius: $select-border-radius;
+  border: $select-border;
+  display: flex;
+  font-size: $select-font-size;
+  font-weight: $select-font-weight;
+  margin-bottom: $select-margin-bottom;
+  padding: $select-padding;
+  width: 100%;
+  -moz-appearance: $select-arrow-appearance;
+  -webkit-appearance: $select-arrow-appearance;
+  &:hover {
+    &:not([disabled]) {
+      border: $select-border-hover;
+      outline: none;
+      color: $select-color-hover;
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
