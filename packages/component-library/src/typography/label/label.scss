@@ -1,0 +1,17 @@
+@import '../../global/global-variables.scss';
+
+$label-font-family: $global-font-family-body;
+$label-font-weight: $global-font-weight-400;
+$label-font-size: $global-font-size-500;
+$label-color: $global-color-shade-500;
+$label-line-height: $global-line-height-400;
+$label-margin-bottom: $global-gutter-300;
+
+.label {
+  color: $label-color;
+  font-family: $label-font-family;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  line-height: $label-line-height;
+  margin-bottom: $label-margin-bottom;
+}

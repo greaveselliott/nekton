@@ -8,6 +8,7 @@ import H5 from './h5/h5.component.tsx';
 import H6 from './h6/h6.component.tsx';
 import Paragraph from './paragraph/paragraph.component.tsx';
 import Link from './link/link.component.tsx';
+import Label from './label/label.component.tsx';
 
 export default { title: 'Typography' };
 
@@ -73,3 +74,5 @@ export const Links = () => (
     </Link>
   </>
 );
+
+export const Labels = () => <Label>Some text describing a select field</Label>;
