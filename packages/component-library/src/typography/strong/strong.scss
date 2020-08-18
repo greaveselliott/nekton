@@ -1,0 +1,17 @@
+@import '../../global/global-variables.scss';
+
+$strong-font-family: $global-font-family-body;
+$strong-font-weight: $global-font-weight-700;
+$strong-font-size: $global-font-size-100;
+$strong-color: $global-color-shade-500;
+$strong-line-height: $global-line-height-400;
+$strong-margin-bottom: $global-gutter-300;
+
+.strong {
+  color: $strong-color;
+  font-family: $strong-font-family;
+  font-size: $strong-font-size;
+  font-weight: $strong-font-weight;
+  line-height: $strong-line-height;
+  margin-bottom: $strong-margin-bottom;
+}

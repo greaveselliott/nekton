@@ -1,5 +1,5 @@
 {
-  "name": "@nekton/component-library",
+  "name": "@coral/component-library",
   "version": "1.0.0",
   "main": "src/index",
   "types": "src/index.d.ts",

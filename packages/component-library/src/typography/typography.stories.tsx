@@ -1,15 +1,23 @@
-import React from 'react';
+import React from "react";
 
-import H1 from './h1/h1.component.tsx';
-import H2 from './h2/h2.component.tsx';
-import H3 from './h3/h3.component.tsx';
-import H4 from './h4/h4.component.tsx';
-import H5 from './h5/h5.component.tsx';
-import H6 from './h6/h6.component.tsx';
-import Paragraph from './paragraph/paragraph.component.tsx';
-import Link from './link/link.component.tsx';
+import H1 from "./h1/h1.component.tsx";
+import H2 from "./h2/h2.component.tsx";
+import H3 from "./h3/h3.component.tsx";
+import H4 from "./h4/h4.component.tsx";
+import H5 from "./h5/h5.component.tsx";
+import H6 from "./h6/h6.component.tsx";
+import Paragraph from "./paragraph/paragraph.component.tsx";
+import Link from "./link/link.component.tsx";
+import Label from "./label/label.component.tsx";
+import Small from "./small/small.component.tsx";
+import Strong from "./strong/strong.component.tsx";
+import Character from "./character/character.component.tsx";
+import {
+  DefinitionList,
+  DefinitionListItem,
+} from "./definition-list/defininition-list.tsx";
 
-export default { title: 'Typography' };
+export default { title: "Typography" };
 
 export const Headings = () => (
   <>
@@ -25,12 +33,12 @@ export const Headings = () => (
 export const Body = () => (
   <>
     <Paragraph>
-      Pirates of the Caribbean: <Link>The Curse of the Black Pearl</Link> is a
-      2003 American fantasy swashbuckler film directed by Gore Verbinski and the
-      first film in the Pirates of the Caribbean film series. Produced by Walt
-      Disney Pictures and Jerry Bruckheimer, the film is based on Walt Disney's
-      Pirates of the Caribbean attraction at Disney theme parks.[3] The story
-      follows pirate Jack Sparrow (Johnny Depp) and blacksmith Will Turner
+      Pirates of the Caribbean: <Link>The Curse of the Black Pearl</Link>
+      is a 2003 American fantasy swashbuckler film directed by Gore Verbinski
+      and the first film in the Pirates of the Caribbean film series. Produced
+      by Walt Disney Pictures and Jerry Bruckheimer, the film is based on Walt
+      Disney's Pirates of the Caribbean attraction at Disney theme parks.[3] The
+      story follows pirate Jack Sparrow (Johnny Depp) and blacksmith Will Turner
       (Orlando Bloom) as they rescue the kidnapped Elizabeth Swann (Keira
       Knightley) from the cursed crew of the Black Pearl, captained by Hector
       Barbossa (Geoffrey Rush), who become undead skeletons at night.
@@ -72,4 +80,47 @@ export const Links = () => (
       A link to somewhere
     </Link>
   </>
+);
+
+export const Labels = () => <Label htmlFor="abc">Form label</Label>;
+
+export const SmallTexts = () => (
+  <>
+    <Small>
+      The film's world premiere was held at Disneyland Park in Anaheim,
+      California on June 28, 2003. Despite low expectations, the film was a huge
+    </Small>
+  </>
+);
+
+export const SmallBoldText = () => (
+  <>
+    <Strong>
+      The film's world premiere was held at Disneyland Park in Anaheim,
+      California on June 28, 2003. Despite low expectations, the film was a huge
+    </Strong>
+  </>
+);
+
+export const Characters = () => (
+  <div style={{ display: "flex", flexWrap: "wrap", width: "200px" }}>
+    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((number) => (
+      <div
+        style={{
+          width: "40px",
+          height: "40px",
+        }}
+      >
+        <Character>{number}</Character>
+      </div>
+    ))}
+  </div>
+);
+
+export const DefinitionLists = () => (
+  <DefinitionList>
+    <DefinitionListItem term="Kit" definition="Favourite kit" />
+    <DefinitionListItem term="Weight" definition="8kg" />
+    <DefinitionListItem term="Dive type" definition="Wreck" />
+  </DefinitionList>
 );

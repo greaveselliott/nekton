@@ -12,11 +12,11 @@ $link-line-height: $global-line-height-400;
   font-size: $link-font-size;
   font-weight: $link-font-weight;
   line-height: $link-line-height;
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   @include accessibility-focus-outline;

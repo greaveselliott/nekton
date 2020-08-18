@@ -1,0 +1,50 @@
+@import '../../global/global-variables.scss';
+
+$definition-list-font-family: $global-font-family-body;
+$definition-list-font-weight: $global-font-weight-300;
+$definition-list-font-size: $global-font-size-200;
+$definition-list-color: $global-color-shade-500;
+$definition-list-line-height: $global-line-height-400;
+$definition-list-margin-bottom: $global-gutter-300;
+
+$definition-list-term-color: $global-color-primary-500;
+
+$definition-list-definition-font-weight: $global-font-weight-700;
+
+.definition-list {
+  display: table;
+  margin-bottom: $definition-list-margin-bottom;
+  width: 100%;
+
+  &-row {
+    display: table-row;
+    width: 100%;
+    height: rem-calc(30);
+
+    &:last-of-type {
+      height: auto;
+    }
+  }
+
+  &-term,
+  &-definition {
+    display: table-cell;
+    color: $definition-list-color;
+    font-family: $definition-list-font-family;
+    font-size: $definition-list-font-size;
+    font-weight: $definition-list-font-weight;
+    line-height: $definition-list-line-height;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  &-term {
+    color: $definition-list-term-color;
+    padding-right: $global-gutter-300;
+  }
+
+  &-definition {
+    font-weight: $definition-list-definition-font-weight;
+    padding-left: $global-gutter-300;
+  }
+}

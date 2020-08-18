@@ -1,0 +1,15 @@
+@import '../../global/global-variables.scss';
+
+$character-font-family: $global-font-family-titles;
+$character-font-weight: $global-font-weight-300;
+$character-font-size: $global-font-size-300;
+$character-color: $global-color-shade-500;
+$character-line-height: $global-line-height-400;
+
+.character {
+  color: $character-color;
+  font-family: $character-font-family;
+  font-size: $character-font-size;
+  font-weight: $character-font-weight;
+  line-height: $character-line-height;
+}
